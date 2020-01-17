@@ -1,6 +1,6 @@
 
 // #if canImport(SwiftUI)
-public struct KamaalUI {
+public struct Hello {
     var text = "Hello, World!"
 }
 // #endif
