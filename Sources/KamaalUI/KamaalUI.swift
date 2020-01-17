@@ -1,7 +1,7 @@
 
 // #if canImport(SwiftUI)
 public struct Hello {
-    var text = "Hello, World!"
+    public var text = "Hello, World!"
     public init() { }
 }
 // #endif
