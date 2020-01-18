@@ -14,7 +14,6 @@ struct FitToPreview: ViewModifier {
     }
 }
 
-
 extension View {
     func fitToPreview(colorScheme: ColorScheme) -> some View {
         self.modifier(FitToPreview(colorScheme: colorScheme))
@@ -53,5 +52,4 @@ var textDark = textView(text: "Kamaal", colorScheme: .dark)
 var textLight = textView(text: "Kamaal", colorScheme: .light)
 var buttonviewDark = buttonView(action: { print("yow") }, text: "Yow", colorScheme: .dark)
 var buttonviewLight = buttonView(action: { print("yow") }, text: "Yow", colorScheme: .light)
-
 
