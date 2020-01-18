@@ -26,10 +26,20 @@ final class KamaalUITests: XCTestCase {
         let component = KText(text)
         XCTAssertTrue(component.text == text)
     }
+    
+    func testKButton() {
+        var i = 1
+        let component = KButton(action: { i += 1 }) {
+            KText("hallo")
+        }
+        component.action()
+        XCTAssertTrue(i == 2)
+    }
 
     static var allTests = [
         ("testkNamedTextField", testkNamedTextField),
         ("testkTimePicker", testkTimePicker),
         ("testkText", testkText),
+        ("testKButton", testKButton),
     ]
 }
