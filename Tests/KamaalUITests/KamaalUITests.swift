@@ -42,10 +42,10 @@ final class KamaalUITests: XCTestCase {
         XCTAssertTrue(i == 2)
     }
 
-//    static var allTests = [
-//        ("testkLabeledTextField", testkLabeledTextField),
-//        ("testkTimePicker", testkTimePicker),
-//        ("testkText", testkText),
-//        ("testKButton", testKButton),
-//    ]
+    static var allTests = [
+        ("testkLabeledTextField", testkLabeledTextField),
+        ("testkTimePicker", testkTimePicker),
+        ("testkText", testkText),
+        ("testKButton", testKButton),
+    ]
 }
