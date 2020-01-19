@@ -2,17 +2,21 @@ import XCTest
 @testable import KamaalUI
 
 final class KamaalUITests: XCTestCase {
-    func testkNamedTextField() {
-        let value = "", name = "Kamaal:", placeholder = "Field", disableTextField = false
-        var component = KNamedTextField(value: .constant(value), name: name, placeholder: placeholder, disableTextField: disableTextField)
+    @available(tvOS 13.0, *)
+    func testkLabeledTextField() {
+        let value = "", label = "Kamaal:", placeholder = "Field", disableTextField = false
+        var component = KLabeledTextField(value: .constant(value), label: label, placeholder: placeholder, disableTextField: disableTextField)
         XCTAssertTrue(component.value.wrappedValue == value)
-        XCTAssertTrue(component.name == name)
+        XCTAssertTrue(component.label == label)
         XCTAssertTrue(component.placeholder == placeholder)
         XCTAssertTrue(component.disableTextField == disableTextField)
         component.disableTextField.toggle()
         XCTAssertFalse(component.disableTextField == disableTextField)
     }
-        
+       
+    @available(tvOS 13.0, *)
+    @available(OSX, unavailable)
+    @available(tvOS, unavailable)
     func testkTimePicker() {
         let selection = 2, steps = 5, range = 0..<12
         let component = KTimePicker(selection: .constant(selection), steps: steps, range: range)
@@ -21,12 +25,14 @@ final class KamaalUITests: XCTestCase {
         XCTAssertTrue(component.range == range)
     }
         
+    @available(tvOS 13.0, *)
     func testkText() {
         let text = "Hallo"
         let component = KText(text)
         XCTAssertTrue(component.text == text)
     }
     
+    @available(tvOS 13.0, *)
     func testKButton() {
         var i = 1
         let component = KButton(action: { i += 1 }) {
@@ -36,10 +42,10 @@ final class KamaalUITests: XCTestCase {
         XCTAssertTrue(i == 2)
     }
 
-    static var allTests = [
-        ("testkNamedTextField", testkNamedTextField),
-        ("testkTimePicker", testkTimePicker),
-        ("testkText", testkText),
-        ("testKButton", testKButton),
-    ]
+//    static var allTests = [
+//        ("testkLabeledTextField", testkLabeledTextField),
+//        ("testkTimePicker", testkTimePicker),
+//        ("testkText", testkText),
+//        ("testKButton", testKButton),
+//    ]
 }

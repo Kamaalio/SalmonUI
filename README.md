@@ -4,25 +4,29 @@
 
 A simple package with some modified SwiftUI components
 
-## Usage
+## Installation
 
-In this little guide, I'll show how to use this package.
+### Swift package manager
 
-Just import `KamaalUI` in your file and use whatever component you want to use. Easy 👍
+- Select File > Swift Packages > Add Package Dependency. Enter `https://github.com/kamaal111/KamaalUI.git` in the "Choose Package Repository" dialog.
+
+- In the next page, specify the version or a specific branch.
+
+- After XCode checking out the source and resolving the version, you can choose the "KamaalUI" library and add it to your app target.
+
+### Next
+
+After installation, you could import Kingfisher to your project by adding this:
 
 ```Swift
 import KamaalUI
-
-struct ContentView: View {
-    var body: some View {
-        KText("HI 🙋‍♂️")
-    }
-}
 ```
 
-You can find all the components in this [**playground**](./Previews.playground/Contents.swift)
+to the files in which you want to use KamaalUI.
 
-# LICENSE
+Once you prepared, continue to have a look at the [**Cheat Sheet**](./docs/cheat_sheet.md) to see how to use KamaalUI.
+
+## LICENSE
 
 ```
 MIT License
