@@ -1,6 +1,8 @@
 os:
   - osx
 language: objective-c
-osx_image: xcode11
+osx_image: xcode11.2
+xcode_project: KamaalUI.xcodeproj
+xcode_sdk: macosx10.15
 script:
   - (cd Scripts && bash test.sh)
