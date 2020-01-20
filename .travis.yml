@@ -1,6 +1,6 @@
+os:
+  - osx
 language: objective-c
-osx_image: xcode11.2
-xcode_sdk: iphonesimulator13.0
-xcode_project: KamaalUI.xcodeproj
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
-xcode_scheme: KamaalUI-Package
+osx_image: xcode11
+script:
+  - (cd Scripts && bash test.sh)

@@ -18,11 +18,13 @@ final class KamaalUITests: XCTestCase {
     @available(OSX, unavailable)
     @available(tvOS, unavailable)
     func testkTimePicker() {
+        #if os(iOS) || os(watchOS)
         let selection = 2, steps = 5, range = 0..<12
         let component = KTimePicker(selection: .constant(selection), steps: steps, range: range)
         XCTAssertTrue(component.selection.wrappedValue * steps == 10)
         XCTAssertTrue(component.steps == steps)
         XCTAssertTrue(component.range == range)
+        #endif
     }
         
     @available(tvOS 13.0, *)
@@ -44,7 +46,7 @@ final class KamaalUITests: XCTestCase {
 
     static var allTests = [
         ("testkLabeledTextField", testkLabeledTextField),
-        ("testkTimePicker", testkTimePicker),
+//        ("testkTimePicker", testkTimePicker),
         ("testkText", testkText),
         ("testKButton", testKButton),
     ]
