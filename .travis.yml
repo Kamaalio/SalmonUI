@@ -1,7 +1,0 @@
-os:
-  - osx
-xcode_project: KamaalUI.xcodeproj
-language: swift
-osx_image: xcode11.3
-script:
-  - set -o pipefail && xcodebuild -project KamaalUI.xcodeproj -scheme 'KamaalUI-Package' -sdk iphonesimulator13.2 ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,OS=13.3,name=iPhone 11 Pro' | xcpretty;

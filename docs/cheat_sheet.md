@@ -25,7 +25,7 @@ struct ContentView: View {
         KButton(action: {
             count += 1
         }) {
-            KText("HI 🙋‍♂️")
+            KText("HI agent \(count) 🙋‍♂️")
         }
     }
 }
