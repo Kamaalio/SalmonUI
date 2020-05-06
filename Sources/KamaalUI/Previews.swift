@@ -144,3 +144,28 @@ struct KLabeledTextField_Previews: PreviewProvider {
         }
     }
 }
+
+struct KRadioCheckBox_Previews: PreviewProvider {
+    static var previews: some View {
+        let description = "Radio Check Box"
+        let color: Color = .accentColor
+        let size: CGFloat = 32
+        let borderWidth: CGFloat = 4
+        let spacing: CGFloat = 4
+        return Group {
+            KRadioCheckBox(checked: true, color: color, size: size, borderWidth: borderWidth, spacing: spacing)
+            .lightPreviewStyle()
+            .previewDisplayName("\(description) \(lightModeText)")
+            KRadioCheckBox(checked: true, color: color, size: size, borderWidth: borderWidth, spacing: spacing)
+            .darkPreviewStyle()
+            .previewDisplayName("\(description) \(darkModeText)")
+            KRadioCheckBox(checked: false, color: color, size: size, borderWidth: borderWidth, spacing: spacing)
+            .lightPreviewStyle()
+            .previewDisplayName("\(description) \(lightModeText) unchecked")
+            KRadioCheckBox(checked: false, color: color, size: size, borderWidth: borderWidth, spacing: spacing)
+            .darkPreviewStyle()
+            .previewDisplayName("\(description) \(darkModeText) unchecked")
+        }
+        .accentColor(.red)
+    }
+}
