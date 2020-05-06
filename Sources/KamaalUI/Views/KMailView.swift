@@ -1,5 +1,5 @@
 //
-//  MailView.swift
+//  KMailView.swift
 //  KamaalUI
 //
 //  Created by Kamaal Farah on 06/05/2020.
@@ -16,7 +16,7 @@ import MessageUI
 @available(tvOS, unavailable)
 @available(OSX, unavailable)
 @available(iOS 13.0, *)
-public struct MailView: UIViewControllerRepresentable {
+public struct KMailView: UIViewControllerRepresentable {
     @Binding var isShowing: Bool
     @Binding var result: Result<MFMailComposeResult, Error>?
 
