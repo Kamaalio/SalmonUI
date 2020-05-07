@@ -1,0 +1,67 @@
+//
+//  KMailView.swift
+//  KamaalUI
+//
+//  Created by Kamaal Farah on 06/05/2020.
+//
+
+import SwiftUI
+#if !os(watchOS) && !os(tvOS) && !os(OSX)
+import MessageUI
+#endif
+
+
+#if !os(watchOS) && !os(tvOS) && !os(OSX)
+@available(iOS 13.0, *)
+@available(watchOS, unavailable)
+@available(tvOS, unavailable)
+@available(OSX, unavailable)
+public struct KMailView: UIViewControllerRepresentable {
+    @Binding var isShowing: Bool
+    @Binding var result: Result<MFMailComposeResult, Error>?
+
+    var emailAddress: String
+    var emailSubject: String
+
+    public class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
+        @Binding var isShowing: Bool
+        @Binding var result: Result<MFMailComposeResult, Error>?
+
+        init(isShowing: Binding<Bool>,
+             result: Binding<Result<MFMailComposeResult, Error>?>) {
+            _isShowing = isShowing
+            _result = result
+        }
+
+        public func mailComposeController(
+            _ controller: MFMailComposeViewController,
+            didFinishWith result: MFMailComposeResult,
+            error: Error?) {
+            defer {
+                isShowing = false
+            }
+            guard error == nil else {
+                self.result = .failure(error!)
+                return
+            }
+            self.result = .success(result)
+        }
+    }
+
+    public func makeCoordinator() -> Coordinator {
+        Coordinator(isShowing: $isShowing, result: $result)
+    }
+
+    public func makeUIViewController(context: UIViewControllerRepresentableContext<KMailView>) -> MFMailComposeViewController {
+        let viewController = MFMailComposeViewController()
+        viewController.mailComposeDelegate = context.coordinator
+        viewController.setToRecipients([emailAddress])
+        viewController.setSubject(emailSubject)
+        return viewController
+    }
+
+    public func updateUIViewController(
+        _ uiViewController: MFMailComposeViewController,
+        context: UIViewControllerRepresentableContext<KMailView>) { }
+}
+#endif
