@@ -12,10 +12,10 @@ import MessageUI
 
 
 #if !os(watchOS) && !os(tvOS) && !os(OSX)
+@available(iOS 13.0, *)
 @available(watchOS, unavailable)
 @available(tvOS, unavailable)
 @available(OSX, unavailable)
-@available(iOS 13.0, *)
 public struct KMailView: UIViewControllerRepresentable {
     @Binding var isShowing: Bool
     @Binding var result: Result<MFMailComposeResult, Error>?
@@ -52,7 +52,7 @@ public struct KMailView: UIViewControllerRepresentable {
         Coordinator(isShowing: $isShowing, result: $result)
     }
 
-    public func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
+    public func makeUIViewController(context: UIViewControllerRepresentableContext<KMailView>) -> MFMailComposeViewController {
         let viewController = MFMailComposeViewController()
         viewController.mailComposeDelegate = context.coordinator
         viewController.setToRecipients([emailAddress])
@@ -62,6 +62,6 @@ public struct KMailView: UIViewControllerRepresentable {
 
     public func updateUIViewController(
         _ uiViewController: MFMailComposeViewController,
-        context: UIViewControllerRepresentableContext<MailView>) { }
+        context: UIViewControllerRepresentableContext<KMailView>) { }
 }
 #endif
