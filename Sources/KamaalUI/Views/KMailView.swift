@@ -12,10 +12,10 @@ import MessageUI
 
 
 #if !os(watchOS) && !os(tvOS) && !os(OSX)
+@available(iOS 13.0, *)
 @available(watchOS, unavailable)
 @available(tvOS, unavailable)
 @available(OSX, unavailable)
-@available(iOS 13.0, *)
 public struct KMailView: UIViewControllerRepresentable {
     @Binding var isShowing: Bool
     @Binding var result: Result<MFMailComposeResult, Error>?

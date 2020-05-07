@@ -5,17 +5,27 @@
 //  Created by Kamaal Farah on 07/05/2020.
 //
 
-#if !os(OSX)
-import UIKit
-#endif
+import SwiftUI
 
 #if !os(OSX) && !os(watchOS)
+@available(iOS 13.0, tvOS 13.0, *)
 @available(watchOS, unavailable)
 @available(OSX, unavailable)
-@available(iOS 13.0, tvOS 13.0, *)
 public extension UIApplication {
     func endEditing() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
+
+#if os(OSX)
+@available(OSX 10.15, *)
+@available(tvOS, unavailable)
+@available(watchOS, unavailable)
+@available(iOS, unavailable)
+public extension NSApplication {
+    func endEditing() {
+        sendAction(#selector(NSResponder.resignFirstResponder), to: nil, from: nil)
     }
 }
 #endif
