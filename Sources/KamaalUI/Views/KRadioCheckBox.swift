@@ -9,11 +9,11 @@ import SwiftUI
 
 @available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 public struct KRadioCheckBox: View {
-    var checked: Bool
-    var color: Color
-    var size: CGFloat
-    var borderWidth: CGFloat
-    var spacing: CGFloat
+    public var checked: Bool
+    public var color: Color
+    public var size: CGFloat
+    public var borderWidth: CGFloat
+    public var spacing: CGFloat
 
     public var body: some View {
         Circle()

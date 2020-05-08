@@ -9,10 +9,10 @@ import SwiftUI
 
 @available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 public struct KLabeledTextField: View {
-    var value: Binding<String>
-    var label: String
-    var placeholder: String
-    var disableTextField: Bool
+    public var value: Binding<String>
+    public var label: String
+    public var placeholder: String
+    public var disableTextField: Bool
 
     public init(value: Binding<String>, label: String, placeholder: String) {
         self.value = value
