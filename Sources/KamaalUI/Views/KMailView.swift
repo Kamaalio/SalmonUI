@@ -17,17 +17,17 @@ import MessageUI
 @available(tvOS, unavailable)
 @available(OSX, unavailable)
 public struct KMailView: UIViewControllerRepresentable {
-    @Binding var isShowing: Bool
-    @Binding var result: Result<MFMailComposeResult, Error>?
+    @Binding public var isShowing: Bool
+    @Binding public var result: Result<MFMailComposeResult, Error>?
 
-    var emailAddress: String
-    var emailSubject: String
+    public var emailAddress: String
+    public var emailSubject: String
 
     public class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
-        @Binding var isShowing: Bool
-        @Binding var result: Result<MFMailComposeResult, Error>?
+        @Binding public var isShowing: Bool
+        @Binding public var result: Result<MFMailComposeResult, Error>?
 
-        init(isShowing: Binding<Bool>,
+        public init(isShowing: Binding<Bool>,
              result: Binding<Result<MFMailComposeResult, Error>?>) {
             _isShowing = isShowing
             _result = result

@@ -12,9 +12,9 @@ import SwiftUI
 @available(watchOS, unavailable)
 @available(OSX, unavailable)
 public struct ActivityIndicator: UIViewRepresentable {
-    @Binding var isAnimating: Bool
+    @Binding public var isAnimating: Bool
 
-    var style: UIActivityIndicatorView.Style
+    public var style: UIActivityIndicatorView.Style
 
     public init(isAnimating: Binding<Bool>, style: UIActivityIndicatorView.Style) {
         self._isAnimating = isAnimating
@@ -37,9 +37,9 @@ public struct ActivityIndicator: UIViewRepresentable {
 @available(iOS, unavailable)
 @available(tvOS, unavailable)
 public struct ActivityIndicator: NSViewRepresentable {
-    @Binding var isAnimating: Bool
+    @Binding public var isAnimating: Bool
 
-    var style: NSProgressIndicator.Style
+    public var style: NSProgressIndicator.Style
 
     public init(isAnimating: Binding<Bool>, style: NSProgressIndicator.Style) {
         self._isAnimating = isAnimating
