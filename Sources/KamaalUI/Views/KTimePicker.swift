@@ -11,9 +11,9 @@ import SwiftUI
 @available(OSX, unavailable)
 @available(tvOS, unavailable)
 public struct KTimePicker: View {
-    var selection: Binding<Int>
-    var steps: Int
-    var range: Range<Int>
+    public var selection: Binding<Int>
+    public var steps: Int
+    public var range: Range<Int>
     
     public init(selection: Binding<Int>, steps: Int, range: Range<Int>) {
         self.selection = selection
