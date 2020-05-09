@@ -14,7 +14,7 @@ public struct KText: View {
     public init(_ content: String) {
         self.text = content
     }
-    
+
     public init(text: String) {
         self.text = text
     }
