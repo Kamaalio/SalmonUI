@@ -14,7 +14,7 @@ public struct KText: View {
     public init(_ content: String) {
         self.text = content
     }
-    
+
     public init(text: String) {
         self.text = text
     }
@@ -23,3 +23,6 @@ public struct KText: View {
         Text(text)
     }
 }
+
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+public extension KText { }
