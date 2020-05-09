@@ -23,6 +23,17 @@ public struct KMailView: UIViewControllerRepresentable {
     public var emailAddress: String
     public var emailSubject: String
 
+    public init(
+        isShowing: Binding<Bool>,
+        result: Binding<Result<MFMailComposeResult, Error>?>,
+        emailAddress: String,
+        emailSubject: String) {
+        self._isShowing = isShowing
+        self._result = result
+        self.emailAddress = emailAddress
+        self.emailSubject = emailSubject
+    }
+
     public class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
         @Binding public var isShowing: Bool
         @Binding public var result: Result<MFMailComposeResult, Error>?

@@ -9,17 +9,11 @@ let package = Package(
         .macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6),
     ],
     products: [
-        .library(
-            name: "KamaalUI",
-            targets: ["KamaalUI"]),
+        .library(name: "KamaalUI", targets: ["KamaalUI"]),
     ],
     dependencies: [],
     targets: [
-        .target(
-            name: "KamaalUI",
-            dependencies: []),
-        .testTarget(
-            name: "KamaalUITests",
-            dependencies: ["KamaalUI"]),
+        .target(name: "KamaalUI", dependencies: []),
+        .testTarget(name: "KamaalUITests", dependencies: ["KamaalUI"]),
     ]
 )
