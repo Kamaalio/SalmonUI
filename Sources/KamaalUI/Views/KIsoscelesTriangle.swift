@@ -9,6 +9,8 @@ import SwiftUI
 
 @available(iOS 13.0, watchOS 6.0, tvOS 13.0, OSX 10.15, *)
 public struct KIsoscelesTriangle: Shape {
+    public init() { }
+
     public func path(in rect: CGRect) -> Path {
         var path = Path()
         path.move(to: CGPoint(x: rect.minX, y: rect.minY))
