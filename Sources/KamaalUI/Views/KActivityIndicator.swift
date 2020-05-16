@@ -11,7 +11,7 @@ import SwiftUI
 @available(iOS 13.0, tvOS 13.0, *)
 @available(watchOS, unavailable)
 @available(OSX, unavailable)
-public struct ActivityIndicator: UIViewRepresentable {
+public struct KActivityIndicator: UIViewRepresentable {
     @Binding public var isAnimating: Bool
 
     public var style: UIActivityIndicatorView.Style
@@ -21,11 +21,11 @@ public struct ActivityIndicator: UIViewRepresentable {
         self.style = style
     }
 
-    public func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
+    public func makeUIView(context: UIViewRepresentableContext<KActivityIndicator>) -> UIActivityIndicatorView {
         return UIActivityIndicatorView(style: style)
     }
 
-    public func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
+    public func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<KActivityIndicator>) {
         isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
     }
 }
@@ -36,7 +36,7 @@ public struct ActivityIndicator: UIViewRepresentable {
 @available(watchOS, unavailable)
 @available(iOS, unavailable)
 @available(tvOS, unavailable)
-public struct ActivityIndicator: NSViewRepresentable {
+public struct KActivityIndicator: NSViewRepresentable {
     @Binding public var isAnimating: Bool
 
     public var style: NSProgressIndicator.Style
