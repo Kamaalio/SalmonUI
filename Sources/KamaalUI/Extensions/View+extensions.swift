@@ -72,6 +72,7 @@ public struct Toast<Presenting>: View where Presenting: View {
                     .lineLimit(2)
             }
             .transition(.opacity)
+            .edgesIgnoringSafeArea(.horizontal)
             .frame(maxWidth: .infinity, maxHeight: toastSize, alignment: .top)
             .background(self.color)
             .opacity(self.isShowing ? 1 : 0)
