@@ -8,7 +8,7 @@ A simple package with some modified SwiftUI components
 | ------- | ------------------------------------------------------------------------------------------ |
 | master  | ![CI](https://github.com/kamaal111/KamaalUI/workflows/CI/badge.svg?branch=master)          |
 | develop | ![CI](https://github.com/kamaal111/KamaalUI/workflows/CI/badge.svg?branch=develop)         |
-| v2.0.0  | ![CI](https://github.com/kamaal111/KamaalUI/workflows/CI/badge.svg?branch=release%2F2.0.0) |
+| v2.1.0  | ![CI](https://github.com/kamaal111/KamaalUI/workflows/CI/badge.svg?branch=release%2F2.1.0) |
 
 ## Installation
 
