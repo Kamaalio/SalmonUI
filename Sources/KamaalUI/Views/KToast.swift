@@ -10,17 +10,17 @@ import SwiftUI
 public struct KToast<Presenting>: View where Presenting: View {
     @Binding public var isShowing: Bool
 
-    public let presenting: () -> Presenting
-    public let textLabel: Text
     public let toastSize: CGFloat
     public let color: Color
+    public let textLabel: Text
+    public let presenting: () -> Presenting
 
     public init(
         isShowing: Binding<Bool>,
-        presenting: @escaping () -> Presenting,
-        textLabel: Text,
         toastSize: CGFloat,
-        color: Color) {
+        color: Color,
+        textLabel: Text,
+        presenting: @escaping () -> Presenting) {
         self._isShowing = isShowing
         self.presenting = presenting
         self.textLabel = textLabel
@@ -47,7 +47,8 @@ public struct KToast<Presenting>: View where Presenting: View {
     }
 }
 
-/// To be deprecated one day
+/// To be deprecated in v3
+/// Use KToast instead
 public struct Toast<Presenting>: View where Presenting: View {
     @Binding public var isShowing: Bool
 

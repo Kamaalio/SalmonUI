@@ -20,10 +20,11 @@ public extension View {
         textLabel: Text,
         toastSize: CGFloat = 20,
         color: Color = .accentColor) -> some View {
-        return KToast(isShowing: isShowing, presenting: { self }, textLabel: textLabel, toastSize: toastSize, color: color)
+        return KToast(isShowing: isShowing, toastSize: toastSize, color: color, textLabel: textLabel) { self }
     }
 
-    /// To be deprecated one day
+    /// To be deprecated in v3
+    /// Use ktoast instead
     func toast(
         isShowing: Binding<Bool>,
         textLabel: Text,
@@ -36,9 +37,7 @@ public extension View {
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width, screenHeight = screenSize.height
         let size = CGSize(width: screenWidth, height: screenHeight)
-        return KPullToRefreshStack(isShowing: isShowing, size: size, action: action) {
-            self
-        }
+        return KPullToRefreshStack(isShowing: isShowing, size: size, action: action) { self }
         .edgesIgnoringSafeArea(.all)
     }
 }

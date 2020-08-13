@@ -12,14 +12,14 @@ import SwiftUI
 @available(watchOS, unavailable)
 @available(tvOS, unavailable)
 @available(macOS, unavailable)
-struct KPullToRefreshStack<Presenting>: UIViewRepresentable where Presenting: View {
-    @Binding var isShowing: Bool
+public struct KPullToRefreshStack<Presenting>: UIViewRepresentable where Presenting: View {
+    @Binding public var isShowing: Bool
 
-    let size: CGSize
-    let action: () -> Void
-    let presenting: () -> Presenting
+    public var size: CGSize
+    public var action: () -> Void
+    public var presenting: () -> Presenting
 
-    init(isShowing: Binding<Bool>,
+    public init(isShowing: Binding<Bool>,
          size: CGSize,
          action: @escaping () -> Void,
          presenting: @escaping () -> Presenting) {
@@ -29,11 +29,11 @@ struct KPullToRefreshStack<Presenting>: UIViewRepresentable where Presenting: Vi
         self.presenting = presenting
     }
 
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         return Coordinator(self, action: self.action)
     }
 
-    func makeUIView(context: Context) -> UIScrollView {
+    public func makeUIView(context: Context) -> UIScrollView {
         let scrollView = UIScrollView()
         let refreshControl = UIRefreshControl()
         scrollView.refreshControl = refreshControl
@@ -48,7 +48,7 @@ struct KPullToRefreshStack<Presenting>: UIViewRepresentable where Presenting: Vi
         return scrollView
     }
 
-    func updateUIView(_ uiView: UIScrollView, context: Context) {
+    public func updateUIView(_ uiView: UIScrollView, context: Context) {
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             if self.isShowing {
                 context.coordinator.refreshControl?.beginRefreshing()
@@ -58,19 +58,19 @@ struct KPullToRefreshStack<Presenting>: UIViewRepresentable where Presenting: Vi
         }
     }
 
-    class Coordinator {
-        var control: KPullToRefreshStack
-        var action: () -> Void
+    public class Coordinator {
+        public var control: KPullToRefreshStack
+        public var action: () -> Void
 
-        var refreshControl: UIRefreshControl?
+        public var refreshControl: UIRefreshControl?
 
-        init(_ control: KPullToRefreshStack, action: @escaping  () -> Void) {
+        public init(_ control: KPullToRefreshStack, action: @escaping  () -> Void) {
             self.control = control
             self.action = action
         }
 
         @objc
-        func handleRefreshControl(sender: UIRefreshControl) {
+        public func handleRefreshControl(sender: UIRefreshControl) {
             self.control.isShowing = true
             self.action()
         }
