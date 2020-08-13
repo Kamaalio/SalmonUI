@@ -12,15 +12,34 @@ import SwiftUI
 @available(macOS, unavailable)
 public extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape(RoundedCorner(radius: radius, corners: corners) )
+        return clipShape(RoundedCorner(radius: radius, corners: corners) )
     }
 
+    func ktoast(
+        isShowing: Binding<Bool>,
+        textLabel: Text,
+        toastSize: CGFloat = 20,
+        color: Color = .accentColor) -> some View {
+        return KToast(isShowing: isShowing, presenting: { self }, textLabel: textLabel, toastSize: toastSize, color: color)
+    }
+
+    /// To be deprecated one day
     func toast(
         isShowing: Binding<Bool>,
         textLabel: Text,
         toastSize: CGFloat = 20,
         color: Color = .accentColor) -> some View {
-        Toast(isShowing: isShowing, presenting: { self }, textLabel: textLabel, toastSize: toastSize, color: color)
+        return Toast(isShowing: isShowing, presenting: { self }, textLabel: textLabel, toastSize: toastSize, color: color)
+    }
+
+    func kpullToRefresh(isShowing: Binding<Bool>, action: @escaping () -> Void) -> some View {
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width, screenHeight = screenSize.height
+        let size = CGSize(width: screenWidth, height: screenHeight)
+        return KPullToRefreshStack(isShowing: isShowing, size: size, action: action) {
+            self
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 #endif
@@ -41,43 +60,3 @@ private struct RoundedCorner: Shape {
     }
 }
 #endif
-
-public struct Toast<Presenting>: View where Presenting: View {
-    @Binding public var isShowing: Bool
-
-    public let presenting: () -> Presenting
-    public let textLabel: Text
-    public let toastSize: CGFloat
-    public let color: Color
-
-    public init(
-        isShowing: Binding<Bool>,
-        presenting: @escaping () -> Presenting,
-        textLabel: Text,
-        toastSize: CGFloat,
-        color: Color) {
-        self._isShowing = isShowing
-        self.presenting = presenting
-        self.textLabel = textLabel
-        self.toastSize = toastSize
-        self.color = color
-    }
-
-    public var body: some View {
-        ZStack(alignment: .top) {
-            VStack {
-                self.textLabel
-                    .font(.body)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(2)
-            }
-            .transition(.opacity)
-            .edgesIgnoringSafeArea(.horizontal)
-            .frame(maxWidth: .infinity, maxHeight: toastSize, alignment: .top)
-            .background(self.color)
-            .opacity(self.isShowing ? 1 : 0)
-            .zIndex(10)
-            self.presenting()
-        }
-    }
-}
