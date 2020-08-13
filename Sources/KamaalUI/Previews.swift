@@ -10,7 +10,7 @@ import SwiftUI
 private let lightModeText = "Light mode"
 private let darkModeText = "Dark mode"
 
-@available(iOS 13.0, watchOS 6.0, tvOS 13.0, OSX 10.15, *)
+@available(iOS 13.0, watchOS 6.0, tvOS 13.0, macOS 10.15, *)
 private struct LightPreviewModifiers: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -21,7 +21,7 @@ private struct LightPreviewModifiers: ViewModifier {
     }
 }
 
-@available(iOS 13.0, watchOS 6.0, tvOS 13.0, OSX 10.15, *)
+@available(iOS 13.0, watchOS 6.0, tvOS 13.0, macOS 10.15, *)
 private struct DarkPreviewModifiers: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -32,7 +32,7 @@ private struct DarkPreviewModifiers: ViewModifier {
     }
 }
 
-@available(iOS 13.0, watchOS 6.0, tvOS 13.0, OSX 10.15, *)
+@available(iOS 13.0, watchOS 6.0, tvOS 13.0, macOS 10.15, *)
 private extension View {
     func darkPreviewStyle() -> some View {
         return self.modifier(DarkPreviewModifiers())
@@ -43,7 +43,7 @@ private extension View {
     }
 }
 
-@available(iOS 13.0, watchOS 6.0, tvOS 13.0, OSX 10.15, *)
+@available(iOS 13.0, watchOS 6.0, tvOS 13.0, macOS 10.15, *)
 struct KButton_Previews: PreviewProvider {
     static var previews: some View {
         let description = "Button"
@@ -66,7 +66,7 @@ struct KButton_Previews: PreviewProvider {
     }
 }
 
-@available(iOS 13.0, watchOS 6.0, tvOS 13.0, OSX 10.15, *)
+@available(iOS 13.0, watchOS 6.0, tvOS 13.0, macOS 10.15, *)
 struct KText_Previews: PreviewProvider {
     static var previews: some View {
         let description = "Text"
@@ -82,9 +82,9 @@ struct KText_Previews: PreviewProvider {
     }
 }
 
-#if !os(tvOS) && !os(OSX)
+#if !os(tvOS) && !os(macOS)
 @available(tvOS, unavailable)
-@available(OSX, unavailable)
+@available(macOS, unavailable)
 @available(iOS 13.0, watchOS 6.0, *)
 struct KTimePicker_Previews: PreviewProvider {
     static var previews: some View {
@@ -104,7 +104,7 @@ struct KTimePicker_Previews: PreviewProvider {
 }
 #endif
 
-@available(iOS 13.0, watchOS 6.0, tvOS 13.0, OSX 10.15, *)
+@available(iOS 13.0, watchOS 6.0, tvOS 13.0, macOS 10.15, *)
 struct KLabeledTextField_Previews: PreviewProvider {
     static var previews: some View {
         let description = "Labeled Text Field"
@@ -156,7 +156,7 @@ struct KLabeledTextField_Previews: PreviewProvider {
     }
 }
 
-@available(iOS 13.0, watchOS 6.0, tvOS 13.0, OSX 10.15, *)
+@available(iOS 13.0, watchOS 6.0, tvOS 13.0, macOS 10.15, *)
 struct KRadioCheckBox_Previews: PreviewProvider {
     static var previews: some View {
         let description = "Radio Check Box"
