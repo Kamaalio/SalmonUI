@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-#if !os(OSX) && !os(watchOS)
+#if !os(macOS) && !os(watchOS)
 @available(iOS 13.0, tvOS 13.0, *)
 @available(watchOS, unavailable)
-@available(OSX, unavailable)
+@available(macOS, unavailable)
 public extension UIApplication {
     func endEditing() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -18,8 +18,8 @@ public extension UIApplication {
 }
 #endif
 
-#if os(OSX)
-@available(OSX 10.15, *)
+#if os(macOS)
+@available(macOS 10.15, *)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 @available(iOS, unavailable)
