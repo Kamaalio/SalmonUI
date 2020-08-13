@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sh scripts/tests/run.sh
+sh scripts/tests/test.sh
