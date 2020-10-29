@@ -1,7 +1,7 @@
 import XCTest
 
-import KamaalUITests
+import SalmonUITests
 
 var tests = [XCTestCaseEntry]()
-tests += KamaalUITests.allTests()
+tests += SalmonUITests.allTests()
 XCTMain(tests)

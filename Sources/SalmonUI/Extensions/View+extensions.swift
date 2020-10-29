@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-#if !os(macOS)
-@available(iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-@available(macOS, unavailable)
+#if !os(macOS) && !os(tvOS)
 public extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         return clipShape(RoundedCorner(radius: radius, corners: corners) )
@@ -44,8 +42,6 @@ public extension View {
 #endif
 
 #if !os(macOS)
-@available(iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-@available(macOS, unavailable)
 private struct RoundedCorner: Shape {
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners

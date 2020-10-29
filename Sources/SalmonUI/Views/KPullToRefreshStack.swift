@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-#if !os(watchOS) && !os(tvOS) && !os(macOS)
-@available(iOS 13.0, *)
-@available(watchOS, unavailable)
-@available(tvOS, unavailable)
-@available(macOS, unavailable)
+#if !os(tvOS) && !os(macOS)
 public struct KPullToRefreshStack<Presenting>: UIViewRepresentable where Presenting: View {
     @Binding public var isShowing: Bool
 
