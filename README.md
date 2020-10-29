@@ -1,37 +1,30 @@
-# KamaalUI
+# SalmonUI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 A simple package with some modified SwiftUI components
 
-| branch  | status                                                                                     |
-| ------- | ------------------------------------------------------------------------------------------ |
-| master  | ![CI](https://github.com/kamaal111/KamaalUI/workflows/CI/badge.svg?branch=master)          |
-| develop | ![CI](https://github.com/kamaal111/KamaalUI/workflows/CI/badge.svg?branch=develop)         |
-| v2.2.0  | ![CI](https://github.com/kamaal111/KamaalUI/workflows/CI/badge.svg?branch=release%2F2.2.0) |
-| v2.1.0  | ![CI](https://github.com/kamaal111/KamaalUI/workflows/CI/badge.svg?branch=release%2F2.1.0) |
-
 ## Installation
 
 ### Swift package manager
 
-- Select File > Swift Packages > Add Package Dependency. Enter `https://github.com/kamaal111/KamaalUI.git` in the "Choose Package Repository" dialog.
+- Select File > Swift Packages > Add Package Dependency. Enter `https://github.com/kamaal111/SalmonUI.git` in the "Choose Package Repository" dialog.
 
 - In the next page, specify the version or a specific branch.
 
-- After XCode checking out the source and resolving the version, you can choose the "KamaalUI" library and add it to your app target.
+- After XCode checking out the source and resolving the version, you can choose the "SalmonUI" library and add it to your app target.
 
 ### Next
 
-After installation, you could import KamaalUI to your project by adding this:
+After installation, you could import SalmonUI to your project by adding this:
 
 ```Swift
-import KamaalUI
+import SalmonUI
 ```
 
-to the files in which you want to use KamaalUI.
+to the files in which you want to use SalmonUI.
 
-Once you prepared, continue to have a look at the [**Cheat Sheet**](./docs/cheat_sheet.md) to see how to use KamaalUI.
+Once you prepared, continue to have a look at the [**Cheat Sheet**](./docs/cheat_sheet.md) to see how to use SalmonUI.
 
 ## LICENSE
 
