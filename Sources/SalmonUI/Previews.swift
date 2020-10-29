@@ -5,6 +5,7 @@
 //  Created by Kamaal Farah on 06/05/2020.
 //
 
+#if DEBUG
 import SwiftUI
 
 private let lightModeText = "Light mode"
@@ -181,3 +182,4 @@ struct KRadioCheckBox_Previews: PreviewProvider {
 //        .accentColor(.red)
     }
 }
+#endif

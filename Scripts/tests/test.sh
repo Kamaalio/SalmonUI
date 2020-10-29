@@ -1,7 +1,7 @@
 #!/bin/sh
 
 workspace=".swiftpm/xcode/package.xcworkspace"
-scheme="KamaalUI"
+scheme="SalmonUI"
 
 destinations=(
   "platform=iOS Simulator,name=iPhone 11 Pro Max"
