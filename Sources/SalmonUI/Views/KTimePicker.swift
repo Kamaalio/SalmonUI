@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, watchOS 6.0, tvOS 13.0, macOS 10.15, *)
-@available(macOS, unavailable)
-@available(tvOS, unavailable)
 public struct KTimePicker: View {
     public var selection: Binding<Int>
     public var steps: Int

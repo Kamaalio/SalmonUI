@@ -7,10 +7,7 @@
 
 import SwiftUI
 
-#if !os(watchOS) && !os(macOS)
-@available(iOS 13.0, tvOS 13.0, *)
-@available(watchOS, unavailable)
-@available(macOS, unavailable)
+#if !os(macOS)
 public struct KActivityIndicator: UIViewRepresentable {
     @Binding public var isAnimating: Bool
 
@@ -32,10 +29,6 @@ public struct KActivityIndicator: UIViewRepresentable {
 #endif
 
 #if os(macOS)
-@available(macOS 10.15, *)
-@available(watchOS, unavailable)
-@available(iOS, unavailable)
-@available(tvOS, unavailable)
 public struct KActivityIndicator: NSViewRepresentable {
     @Binding public var isAnimating: Bool
 
