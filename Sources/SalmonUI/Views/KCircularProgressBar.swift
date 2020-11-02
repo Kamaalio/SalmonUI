@@ -45,7 +45,7 @@ public struct KCircularProgressBar: View {
 
     private func onProgressBaraAppear() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            loaded = true
+            self.loaded = true
         }
     }
 }
