@@ -31,20 +31,20 @@ public struct KStepper: View {
                 .opacity(decrementOpacity)
                 .disabled(value <= 0)
                 .onTapGesture(perform: {
-                    decrementOpacity = 0.2
-                    onDecrement()
+                    self.decrementOpacity = 0.2
+                    self.onDecrement()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        withAnimation { decrementOpacity = 1 }
+                        withAnimation { self.decrementOpacity = 1 }
                     }
                 })
             Image(systemName: "plus.rectangle.fill")
                 .size(size)
                 .opacity(incrementOpacity)
                 .onTapGesture(perform: {
-                    incrementOpacity = 0.2
-                    onIncrement()
+                    self.incrementOpacity = 0.2
+                    self.onIncrement()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        withAnimation { incrementOpacity = 1 }
+                        withAnimation { self.incrementOpacity = 1 }
                     }
                 })
         }
