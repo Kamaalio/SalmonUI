@@ -12,32 +12,6 @@ public extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         return clipShape(RoundedCorner(radius: radius, corners: corners) )
     }
-
-    func ktoast(
-        isShowing: Binding<Bool>,
-        textLabel: Text,
-        toastSize: CGFloat = 20,
-        color: Color = .accentColor) -> some View {
-        return KToast(isShowing: isShowing, toastSize: toastSize, color: color, textLabel: textLabel) { self }
-    }
-
-    /// To be deprecated in v3
-    /// Use ktoast instead
-    func toast(
-        isShowing: Binding<Bool>,
-        textLabel: Text,
-        toastSize: CGFloat = 20,
-        color: Color = .accentColor) -> some View {
-        return Toast(isShowing: isShowing, presenting: { self }, textLabel: textLabel, toastSize: toastSize, color: color)
-    }
-
-    func kpullToRefresh(isShowing: Binding<Bool>, action: @escaping () -> Void) -> some View {
-        let screenSize = UIScreen.main.bounds
-        let screenWidth = screenSize.width, screenHeight = screenSize.height
-        let size = CGSize(width: screenWidth, height: screenHeight)
-        return KPullToRefreshStack(isShowing: isShowing, size: size, action: action) { self }
-        .edgesIgnoringSafeArea(.all)
-    }
 }
 #endif
 
