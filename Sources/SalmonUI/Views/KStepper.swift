@@ -12,14 +12,20 @@ public struct KStepper: View {
     @State private var incrementOpacity = 1.0
     @State private var decrementOpacity = 1.0
 
-    public let value: Int
     public let size: CGSize
+    public let disableIncrement: Bool
+    public let disableDecrement: Bool
     public let onIncrement: () -> Void
     public let onDecrement: () -> Void
 
-    public init(value: Int, size: CGSize, onIncrement: @escaping () -> Void, onDecrement: @escaping () -> Void) {
-        self.value = value
+    public init(size: CGSize,
+                disableIncrement: Bool = false,
+                disableDecrement: Bool = false,
+                onIncrement: @escaping () -> Void,
+                onDecrement: @escaping () -> Void) {
         self.size = size
+        self.disableIncrement = disableIncrement
+        self.disableDecrement = disableDecrement
         self.onIncrement = onIncrement
         self.onDecrement = onDecrement
     }
@@ -29,7 +35,7 @@ public struct KStepper: View {
             Image(systemName: "minus.rectangle.fill")
                 .size(size)
                 .opacity(decrementOpacity)
-                .disabled(value <= 0)
+                .disabled(disableDecrement)
                 .onTapGesture(perform: {
                     self.decrementOpacity = 0.2
                     self.onDecrement()
@@ -40,6 +46,7 @@ public struct KStepper: View {
             Image(systemName: "plus.rectangle.fill")
                 .size(size)
                 .opacity(incrementOpacity)
+                .disabled(disableIncrement)
                 .onTapGesture(perform: {
                     self.incrementOpacity = 0.2
                     self.onIncrement()
