@@ -9,7 +9,7 @@ import SwiftUI
 
 #if !os(tvOS)
 public struct KStepper: View {
-    #if !os(macOS) || !targetEnvironment(macCatalyst)
+    #if !os(macOS) && !targetEnvironment(macCatalyst)
     @State private var incrementOpacity = 1.0
     @State private var decrementOpacity = 1.0
     #endif
@@ -32,7 +32,7 @@ public struct KStepper: View {
         self.onDecrement = onDecrement
     }
 
-    #if !os(macOS) || !targetEnvironment(macCatalyst)
+    #if !os(macOS) && !targetEnvironment(macCatalyst)
     public var body: some View {
         HStack {
             Image(systemName: "minus.rectangle.fill")
