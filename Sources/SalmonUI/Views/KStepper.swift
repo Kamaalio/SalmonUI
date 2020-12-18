@@ -8,6 +8,7 @@
 import SwiftUI
 
 #if !os(tvOS)
+@available(iOS 13.0, OSX 11.0, *)
 public struct KStepper: View {
     #if !os(macOS) && !targetEnvironment(macCatalyst)
     @State private var incrementOpacity = 1.0
