@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1D2F6B2598A7360027C739 /* KToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D2F6A2598A7360027C739 /* KToast.swift */; };
 		2CFF7F85257C034900668DE8 /* SalmonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFF7F7B257C034800668DE8 /* SalmonUI.framework */; };
 		2CFF7F8A257C034900668DE8 /* SalmonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7F89257C034900668DE8 /* SalmonUITests.swift */; };
 		2CFF7FAF257C04B200668DE8 /* UIApplication+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7FA2257C04B200668DE8 /* UIApplication+extensions.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1D2F6A2598A7360027C739 /* KToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KToast.swift; sourceTree = "<group>"; };
 		2CFF7F7B257C034800668DE8 /* SalmonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SalmonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFF7F7F257C034900668DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CFF7F84257C034900668DE8 /* SalmonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalmonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				2CFF7FAC257C04B200668DE8 /* KMailView.swift */,
 				2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */,
 				2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */,
+				2C1D2F6A2598A7360027C739 /* KToast.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				2CFF7FB5257C04B200668DE8 /* KTappableButton.swift in Sources */,
 				2CFF7FB1257C04B200668DE8 /* Image+extensions.swift in Sources */,
 				2CFF7FB9257C04B200668DE8 /* KActivityIndicator.swift in Sources */,
+				2C1D2F6B2598A7360027C739 /* KToast.swift in Sources */,
 				2CFF7FB0257C04B200668DE8 /* View+extensions.swift in Sources */,
 				2CFF7FBA257C04B200668DE8 /* KTimePicker.swift in Sources */,
 				2CFF7FB2257C04B200668DE8 /* KIsoscelesTriangle.swift in Sources */,
