@@ -13,4 +13,12 @@ public extension Image {
             .resizable()
             .frame(width: imageSize.width, height: imageSize.height)
     }
+
+    func bold() -> some View {
+        self.bold(.body)
+    }
+
+    func bold(_ font: Font) -> some View {
+        self.font(font.bold())
+    }
 }
