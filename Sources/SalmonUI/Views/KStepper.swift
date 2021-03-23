@@ -33,7 +33,7 @@ public struct KStepper: View {
         self.onDecrement = onDecrement
     }
 
-    #if !os(macOS) && !targetEnvironment(macCatalyst)
+    #if os(iOS)
     public var body: some View {
         HStack {
             Image(systemName: "minus.rectangle.fill")
@@ -65,7 +65,7 @@ public struct KStepper: View {
         }
         .foregroundColor(.accentColor)
     }
-    #else
+    #elseif targetEnvironment(macCatalyst)
     public var body: some View {
         HStack {
             Button(action: onDecrement) {
@@ -80,6 +80,25 @@ public struct KStepper: View {
                     .foregroundColor(.accentColor)
             }
             .disabled(disableIncrement)
+        }
+    }
+    #elseif os(macOS)
+    public var body: some View {
+        HStack {
+            Button(action: onDecrement) {
+                Image(systemName: "minus.rectangle.fill")
+                    .size(size)
+                    .foregroundColor(.accentColor)
+            }
+            .disabled(disableDecrement)
+            .buttonStyle(PlainButtonStyle())
+            Button(action: onIncrement) {
+                Image(systemName: "plus.rectangle.fill")
+                    .size(size)
+                    .foregroundColor(.accentColor)
+            }
+            .disabled(disableIncrement)
+            .buttonStyle(PlainButtonStyle())
         }
     }
     #endif
