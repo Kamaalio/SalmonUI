@@ -33,7 +33,7 @@ public struct KStepper: View {
         self.onDecrement = onDecrement
     }
 
-    #if os(iOS)
+    #if os(iOS) && !targetEnvironment(macCatalyst)
     public var body: some View {
         HStack {
             Image(systemName: "minus.rectangle.fill")

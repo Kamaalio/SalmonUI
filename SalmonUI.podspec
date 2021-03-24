@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SalmonUI"
-  spec.version      = "3.0.0"
+  spec.version      = "3.3.1"
   spec.summary      = "A simple package with some modified SwiftUI components"
 
   spec.description  = <<-DESC
