@@ -10,7 +10,7 @@ import SwiftUI
 #if !os(macOS) && !os(tvOS)
 public extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        return clipShape(RoundedCorner(radius: radius, corners: corners) )
+        clipShape(RoundedCorner(radius: radius, corners: corners) )
     }
 
     func ktoast(
@@ -18,7 +18,7 @@ public extension View {
         textLabel: Text,
         toastSize: CGFloat = 20,
         color: Color = .accentColor) -> some View {
-        return KToast(isShowing: isShowing, toastSize: toastSize, color: color, textLabel: textLabel) { self }
+        KToast(isShowing: isShowing, toastSize: toastSize, color: color, textLabel: textLabel) { self }
     }
 }
 #endif

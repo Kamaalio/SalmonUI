@@ -15,10 +15,18 @@ public extension Image {
     }
 
     func bold() -> some View {
-        self.bold(.body)
+        self.modifier(ImageBoldViewModifier(font: .body))
     }
 
     func bold(_ font: Font) -> some View {
-        self.font(font.bold())
+        self.modifier(ImageBoldViewModifier(font: font))
+    }
+}
+
+private struct ImageBoldViewModifier: ViewModifier {
+    let font: Font
+
+    func body(content: Content) -> some View {
+        content.font(font.bold())
     }
 }
