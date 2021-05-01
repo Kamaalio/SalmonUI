@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if !os(macOS) && !os(tvOS)
+#if !os(macOS)
 public struct KTimePicker: View {
     public var selection: Binding<Int>
     public var steps: Int

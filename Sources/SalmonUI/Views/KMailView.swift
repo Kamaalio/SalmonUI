@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-#if !os(tvOS) && !os(macOS)
+#if !os(macOS)
 import MessageUI
 #endif
 
 
-#if !os(tvOS) && !os(macOS)
+#if !os(macOS)
 public struct KMailView: UIViewControllerRepresentable {
     @Binding public var isShowing: Bool
     @Binding public var result: Result<MFMailComposeResult, Error>?
