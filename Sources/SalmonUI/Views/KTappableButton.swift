@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-#if !os(tvOS)
 public struct KTappableButton<Label>: View where Label: View {
     public let action: () -> Void
     public let label: Label
@@ -22,4 +21,3 @@ public struct KTappableButton<Label>: View where Label: View {
             .onTapGesture(perform: action)
     }
 }
-#endif
