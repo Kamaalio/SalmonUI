@@ -25,6 +25,7 @@
 		607794E5268D9B5C004A0D8A /* KFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */; };
 		607794E7268D9DB1004A0D8A /* KFloatingDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */; };
 		607794E9268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E8268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift */; };
+		607794EB268DA021004A0D8A /* KSheetStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794EA268DA021004A0D8A /* KSheetStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFloatingTextField.swift; sourceTree = "<group>"; };
 		607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFloatingDatePicker.swift; sourceTree = "<group>"; };
 		607794E8268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEnforcedFloatingDecimalField.swift; sourceTree = "<group>"; };
+		607794EA268DA021004A0D8A /* KSheetStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSheetStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				2CFF7FA7257C04B200668DE8 /* KLabeledTextField.swift */,
 				2CFF7FAC257C04B200668DE8 /* KMailView.swift */,
 				2CFF7FA8257C04B200668DE8 /* KRadioCheckBox.swift */,
+				607794EA268DA021004A0D8A /* KSheetStack.swift */,
 				2CFF7FAA257C04B200668DE8 /* KStepper.swift */,
 				2CFF7FA9257C04B200668DE8 /* KTappableButton.swift */,
 				2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */,
@@ -277,6 +280,7 @@
 				2CFF7FB9257C04B200668DE8 /* KActivityIndicator.swift in Sources */,
 				2C1D2F6B2598A7360027C739 /* KToast.swift in Sources */,
 				2CFF7FB0257C04B200668DE8 /* View+extensions.swift in Sources */,
+				607794EB268DA021004A0D8A /* KSheetStack.swift in Sources */,
 				2CFF7FBA257C04B200668DE8 /* KTimePicker.swift in Sources */,
 				607794E9268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift in Sources */,
 				607794E7268D9DB1004A0D8A /* KFloatingDatePicker.swift in Sources */,
