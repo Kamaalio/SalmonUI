@@ -22,6 +22,7 @@
 		2CFF7FB8257C04B200668DE8 /* KMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7FAC257C04B200668DE8 /* KMailView.swift */; };
 		2CFF7FB9257C04B200668DE8 /* KActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */; };
 		2CFF7FBA257C04B200668DE8 /* KTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */; };
+		607794E5268D9B5C004A0D8A /* KFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		2CFF7FAC257C04B200668DE8 /* KMailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMailView.swift; sourceTree = "<group>"; };
 		2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KActivityIndicator.swift; sourceTree = "<group>"; };
 		2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTimePicker.swift; sourceTree = "<group>"; };
+		607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFloatingTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */,
 				2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */,
 				2C1D2F6A2598A7360027C739 /* KToast.swift */,
+				607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				2CFF7FB8257C04B200668DE8 /* KMailView.swift in Sources */,
 				2CFF7FAF257C04B200668DE8 /* UIApplication+extensions.swift in Sources */,
 				2CFF7FB4257C04B200668DE8 /* KRadioCheckBox.swift in Sources */,
+				607794E5268D9B5C004A0D8A /* KFloatingTextField.swift in Sources */,
 				2CFF7FB3257C04B200668DE8 /* KLabeledTextField.swift in Sources */,
 				2CFF7FB6257C04B200668DE8 /* KStepper.swift in Sources */,
 			);
@@ -425,7 +429,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -438,7 +442,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 4.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.SalmonUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -454,7 +458,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -467,7 +471,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 4.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.SalmonUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
