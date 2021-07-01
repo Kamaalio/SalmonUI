@@ -24,6 +24,7 @@
 		2CFF7FBA257C04B200668DE8 /* KTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */; };
 		607794E5268D9B5C004A0D8A /* KFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */; };
 		607794E7268D9DB1004A0D8A /* KFloatingDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */; };
+		607794E9268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E8268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTimePicker.swift; sourceTree = "<group>"; };
 		607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFloatingTextField.swift; sourceTree = "<group>"; };
 		607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFloatingDatePicker.swift; sourceTree = "<group>"; };
+		607794E8268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEnforcedFloatingDecimalField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,8 @@
 			children = (
 				2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */,
 				2CFF7FAB257C04B200668DE8 /* KCircularProgressBar.swift */,
+				607794E8268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift */,
+				607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */,
 				607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */,
 				2CFF7FA6257C04B200668DE8 /* KIsoscelesTriangle.swift */,
 				2CFF7FA7257C04B200668DE8 /* KLabeledTextField.swift */,
@@ -157,7 +161,6 @@
 				2CFF7FA9257C04B200668DE8 /* KTappableButton.swift */,
 				2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */,
 				2C1D2F6A2598A7360027C739 /* KToast.swift */,
-				607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,7 +221,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					2CFF7F7A257C034800668DE8 = {
 						CreatedOnToolsVersion = 12.2;
@@ -275,6 +278,7 @@
 				2C1D2F6B2598A7360027C739 /* KToast.swift in Sources */,
 				2CFF7FB0257C04B200668DE8 /* View+extensions.swift in Sources */,
 				2CFF7FBA257C04B200668DE8 /* KTimePicker.swift in Sources */,
+				607794E9268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift in Sources */,
 				607794E7268D9DB1004A0D8A /* KFloatingDatePicker.swift in Sources */,
 				2CFF7FB2257C04B200668DE8 /* KIsoscelesTriangle.swift in Sources */,
 				2CFF7FB7257C04B200668DE8 /* KCircularProgressBar.swift in Sources */,
@@ -431,7 +435,7 @@
 		2CFF7F90257C034900668DE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
@@ -460,7 +464,7 @@
 		2CFF7F91257C034900668DE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
