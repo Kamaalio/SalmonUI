@@ -24,11 +24,11 @@ public extension View {
 #endif
 
 public extension View {
-    func takeSizeEagerly(alignment: Alignment = .center) -> some View {
+    func ktakeSizeEagerly(alignment: Alignment = .center) -> some View {
         self.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: alignment)
     }
 
-    func takeWidthEagerly(alignment: Alignment = .center) -> some View {
+    func ktakeWidthEagerly(alignment: Alignment = .center) -> some View {
         self.frame(maxWidth: .infinity, alignment: alignment)
     }
 }
