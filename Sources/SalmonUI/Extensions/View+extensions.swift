@@ -23,6 +23,16 @@ public extension View {
 }
 #endif
 
+public extension View {
+    func ktakeSizeEagerly(alignment: Alignment = .center) -> some View {
+        self.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: alignment)
+    }
+
+    func ktakeWidthEagerly(alignment: Alignment = .center) -> some View {
+        self.frame(maxWidth: .infinity, alignment: alignment)
+    }
+}
+
 #if !os(macOS)
 private struct RoundedCorner: Shape {
     var radius: CGFloat = .infinity
