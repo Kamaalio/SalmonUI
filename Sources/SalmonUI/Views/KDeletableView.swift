@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 11.0, *)
 public struct KDeletableView<Content: View>: View {
     @State private var textSize = CGSize(width: 60, height: 60)
 
@@ -48,7 +49,7 @@ public struct KDeletableView<Content: View>: View {
                     ZStack {
                         Color.red
                         Text(deleteText)
-                            .foregroundColor(Color(.systemBackground))
+                            .foregroundColor(light: .white, dark: .black)
                             .kBindToFrameSize($textSize)
                     }
                     .frame(minWidth: deleteButtonWidth,
@@ -73,11 +74,13 @@ public struct KDeletableView<Content: View>: View {
 }
 
 public extension View {
+    @available(macOS 11.0, *)
     func kDeletableView(isDeleting: Binding<Bool>, enabled: Bool, onDelete: @escaping () -> Void) -> some View {
         KDeletableView(isDeleting: isDeleting, enabled: enabled, onDelete: onDelete, content: { self })
     }
 }
 
+@available(macOS 11.0, *)
 struct KDeletableView_Previews: PreviewProvider {
     static var previews: some View {
         Text("Yes delete me")
