@@ -8,14 +8,16 @@
 import SwiftUI
 
 public struct KDeletableView<Content: View>: View {
-    @Binding var isDeleting: Bool
+    @State private var textSize = CGSize(width: 60, height: 60)
+
+    @Binding public var isDeleting: Bool
 
     public let enabled: Bool
     public let deleteText: String
     public let onDelete: () -> Void
     public let content: () -> Content
 
-    private let deleteButtonSize: CGFloat = 68
+    private let deleteButtonHeight: CGFloat = 68
 
     public init(isDeleting: Binding<Bool>,
                 enabled: Bool,
@@ -47,16 +49,21 @@ public struct KDeletableView<Content: View>: View {
                         Color.red
                         Text(deleteText)
                             .foregroundColor(Color(.systemBackground))
+                            .kBindToFrameSize($textSize)
                     }
-                    .frame(minWidth: deleteButtonSize,
-                           maxWidth: deleteButtonSize,
-                           minHeight: deleteButtonSize,
-                           maxHeight: deleteButtonSize)
+                    .frame(minWidth: deleteButtonWidth,
+                           maxWidth: deleteButtonWidth,
+                           minHeight: deleteButtonHeight,
+                           maxHeight: deleteButtonHeight)
                 }
                 .transition(.move(edge: .trailing))
             }
         }
         .ktakeWidthEagerly(alignment: .leading)
+    }
+
+    private var deleteButtonWidth: CGFloat {
+        textSize.width + 16
     }
 
     private func _onDelete() {
