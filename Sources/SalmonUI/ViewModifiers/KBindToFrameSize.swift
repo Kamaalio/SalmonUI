@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension View {
+public extension View {
     func kBindToFrameSize(_ size: Binding<CGSize>) -> some View {
         self.modifier(KBindToFrameSize(size: size))
     }
