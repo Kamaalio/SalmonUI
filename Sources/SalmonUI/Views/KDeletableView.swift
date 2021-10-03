@@ -18,8 +18,6 @@ public struct KDeletableView<Content: View>: View {
     public let onDelete: () -> Void
     public let content: () -> Content
 
-    private let deleteButtonHeight: CGFloat = 68
-
     public init(isDeleting: Binding<Bool>,
                 enabled: Bool,
                 deleteText: String = "Delete",
@@ -57,6 +55,7 @@ public struct KDeletableView<Content: View>: View {
                            minHeight: deleteButtonHeight,
                            maxHeight: deleteButtonHeight)
                 }
+                .buttonStyle(PlainButtonStyle())
                 .transition(.move(edge: .trailing))
             }
         }
@@ -65,6 +64,10 @@ public struct KDeletableView<Content: View>: View {
 
     private var deleteButtonWidth: CGFloat {
         textSize.width + 16
+    }
+
+    private var deleteButtonHeight: CGFloat {
+        textSize.height + 16
     }
 
     private func _onDelete() {
