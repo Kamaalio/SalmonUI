@@ -38,6 +38,7 @@ public struct KDeletableView<Content: View>: View {
                         .foregroundColor(.red)
                         .padding(.leading, 20)
                 }
+                .buttonStyle(PlainButtonStyle())
                 .transition(.move(edge: .leading))
             }
             content()
