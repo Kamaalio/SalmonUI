@@ -2,11 +2,11 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SalmonUI"
-  spec.version      = "4.0.0"
-  spec.summary      = "A simple package with some modified SwiftUI components"
+  spec.version      = "4.2.0"
+  spec.summary      = "Awesome SwiftUI views"
 
   spec.description  = <<-DESC
-  A simple package with some modified SwiftUI components
+  A simple package with some modified SwiftUI views
                    DESC
 
   spec.homepage     = "https://github.com/kamaal111/SalmonUI"

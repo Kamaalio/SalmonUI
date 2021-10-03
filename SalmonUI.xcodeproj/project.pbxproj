@@ -22,6 +22,15 @@
 		2CFF7FB8257C04B200668DE8 /* KMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7FAC257C04B200668DE8 /* KMailView.swift */; };
 		2CFF7FB9257C04B200668DE8 /* KActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */; };
 		2CFF7FBA257C04B200668DE8 /* KTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */; };
+		607794E5268D9B5C004A0D8A /* KFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */; };
+		607794E7268D9DB1004A0D8A /* KFloatingDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */; };
+		607794E9268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794E8268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift */; };
+		607794EB268DA021004A0D8A /* KSheetStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607794EA268DA021004A0D8A /* KSheetStack.swift */; };
+		607794ED268DA12A004A0D8A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 607794EC268DA12A004A0D8A /* LICENSE */; };
+		607794F2268DA13D004A0D8A /* run.sh in Resources */ = {isa = PBXBuildFile; fileRef = 607794F0268DA13D004A0D8A /* run.sh */; };
+		607794F3268DA13D004A0D8A /* test.sh in Resources */ = {isa = PBXBuildFile; fileRef = 607794F1268DA13D004A0D8A /* test.sh */; };
+		607794F5268DA149004A0D8A /* SalmonUI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 607794F4268DA149004A0D8A /* SalmonUI.podspec */; };
+		607794F9268DA15B004A0D8A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 607794F8268DA15B004A0D8A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,15 @@
 		2CFF7FAC257C04B200668DE8 /* KMailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMailView.swift; sourceTree = "<group>"; };
 		2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KActivityIndicator.swift; sourceTree = "<group>"; };
 		2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTimePicker.swift; sourceTree = "<group>"; };
+		607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFloatingTextField.swift; sourceTree = "<group>"; };
+		607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFloatingDatePicker.swift; sourceTree = "<group>"; };
+		607794E8268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEnforcedFloatingDecimalField.swift; sourceTree = "<group>"; };
+		607794EA268DA021004A0D8A /* KSheetStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSheetStack.swift; sourceTree = "<group>"; };
+		607794EC268DA12A004A0D8A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		607794F0268DA13D004A0D8A /* run.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = run.sh; sourceTree = "<group>"; };
+		607794F1268DA13D004A0D8A /* test.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = test.sh; sourceTree = "<group>"; };
+		607794F4268DA149004A0D8A /* SalmonUI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SalmonUI.podspec; sourceTree = "<group>"; };
+		607794F8268DA15B004A0D8A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +96,13 @@
 		2CFF7F71257C034800668DE8 = {
 			isa = PBXGroup;
 			children = (
+				607794EC268DA12A004A0D8A /* LICENSE */,
+				607794F8268DA15B004A0D8A /* README.md */,
+				607794F4268DA149004A0D8A /* SalmonUI.podspec */,
+				2CFF7F7C257C034800668DE8 /* Products */,
+				607794EE268DA13D004A0D8A /* Scripts */,
 				2CFF7F9E257C044300668DE8 /* Sources */,
 				2CFF7F97257C03CC00668DE8 /* Tests */,
-				2CFF7F7C257C034800668DE8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,18 +164,39 @@
 		2CFF7FA5257C04B200668DE8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */,
+				2CFF7FAB257C04B200668DE8 /* KCircularProgressBar.swift */,
+				607794E8268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift */,
+				607794E6268D9DB1004A0D8A /* KFloatingDatePicker.swift */,
+				607794E4268D9B5C004A0D8A /* KFloatingTextField.swift */,
 				2CFF7FA6257C04B200668DE8 /* KIsoscelesTriangle.swift */,
 				2CFF7FA7257C04B200668DE8 /* KLabeledTextField.swift */,
-				2CFF7FA8257C04B200668DE8 /* KRadioCheckBox.swift */,
-				2CFF7FA9257C04B200668DE8 /* KTappableButton.swift */,
-				2CFF7FAA257C04B200668DE8 /* KStepper.swift */,
-				2CFF7FAB257C04B200668DE8 /* KCircularProgressBar.swift */,
 				2CFF7FAC257C04B200668DE8 /* KMailView.swift */,
-				2CFF7FAD257C04B200668DE8 /* KActivityIndicator.swift */,
+				2CFF7FA8257C04B200668DE8 /* KRadioCheckBox.swift */,
+				607794EA268DA021004A0D8A /* KSheetStack.swift */,
+				2CFF7FAA257C04B200668DE8 /* KStepper.swift */,
+				2CFF7FA9257C04B200668DE8 /* KTappableButton.swift */,
 				2CFF7FAE257C04B200668DE8 /* KTimePicker.swift */,
 				2C1D2F6A2598A7360027C739 /* KToast.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		607794EE268DA13D004A0D8A /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				607794EF268DA13D004A0D8A /* tests */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		607794EF268DA13D004A0D8A /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				607794F0268DA13D004A0D8A /* run.sh */,
+				607794F1268DA13D004A0D8A /* test.sh */,
+			);
+			path = tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +255,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					2CFF7F7A257C034800668DE8 = {
 						CreatedOnToolsVersion = 12.2;
@@ -246,6 +289,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607794F5268DA149004A0D8A /* SalmonUI.podspec in Resources */,
+				607794F3268DA13D004A0D8A /* test.sh in Resources */,
+				607794F9268DA15B004A0D8A /* README.md in Resources */,
+				607794F2268DA13D004A0D8A /* run.sh in Resources */,
+				607794ED268DA12A004A0D8A /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,12 +316,16 @@
 				2CFF7FB9257C04B200668DE8 /* KActivityIndicator.swift in Sources */,
 				2C1D2F6B2598A7360027C739 /* KToast.swift in Sources */,
 				2CFF7FB0257C04B200668DE8 /* View+extensions.swift in Sources */,
+				607794EB268DA021004A0D8A /* KSheetStack.swift in Sources */,
 				2CFF7FBA257C04B200668DE8 /* KTimePicker.swift in Sources */,
+				607794E9268D9ECA004A0D8A /* KEnforcedFloatingDecimalField.swift in Sources */,
+				607794E7268D9DB1004A0D8A /* KFloatingDatePicker.swift in Sources */,
 				2CFF7FB2257C04B200668DE8 /* KIsoscelesTriangle.swift in Sources */,
 				2CFF7FB7257C04B200668DE8 /* KCircularProgressBar.swift in Sources */,
 				2CFF7FB8257C04B200668DE8 /* KMailView.swift in Sources */,
 				2CFF7FAF257C04B200668DE8 /* UIApplication+extensions.swift in Sources */,
 				2CFF7FB4257C04B200668DE8 /* KRadioCheckBox.swift in Sources */,
+				607794E5268D9B5C004A0D8A /* KFloatingTextField.swift in Sources */,
 				2CFF7FB3257C04B200668DE8 /* KLabeledTextField.swift in Sources */,
 				2CFF7FB6257C04B200668DE8 /* KStepper.swift in Sources */,
 			);
@@ -423,9 +475,9 @@
 		2CFF7F90257C034900668DE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -438,7 +490,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 4.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.SalmonUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -452,9 +504,9 @@
 		2CFF7F91257C034900668DE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -467,7 +519,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 4.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.SalmonUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
