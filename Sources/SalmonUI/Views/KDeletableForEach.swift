@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 11.0, *)
 struct KDeletableForEach<Data: RandomAccessCollection, ID: Hashable, Content: View>: View {
     let data: Data
     let id: KeyPath<Data.Element, ID>
