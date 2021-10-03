@@ -31,7 +31,7 @@ Once you prepared, continue to have a look at the [**Cheat Sheet**](./docs/cheat
 ```
 MIT License
 
-Copyright (c) 2020 Kamaal
+Copyright (c) 2020-2021 Kamaal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
