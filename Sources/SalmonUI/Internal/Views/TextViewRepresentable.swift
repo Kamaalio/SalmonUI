@@ -25,9 +25,6 @@ struct TextViewRepresentable: UIViewRepresentable {
         if uiView.text != text {
             uiView.text = text
         }
-        if uiView.window != nil, !uiView.isFirstResponder {
-            uiView.becomeFirstResponder()
-        }
     }
 
     func makeCoordinator() -> Coordinator {
