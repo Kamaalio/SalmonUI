@@ -40,10 +40,28 @@ struct FloatingFieldWrapper<Field: View>: View {
     }
 }
 
+#if DEBUG
 struct FloatingFieldWrapper_Previews: PreviewProvider {
+    typealias PreviewData = FloatingFieldWrapperData
+
     static var previews: some View {
-        FloatingFieldWrapper(text: "text", title: "Title", field: {
-            TextViewRepresentable(text: .constant("text"))
-        })
+        ForEach(data, id: \.self) { item in
+            // Uses FloatingFieldWrapper
+            KFloatingTextField(text: .constant(item.text), title: item.title)
+                .frame(width: 200, height: 200)
+                .previewLayout(.sizeThatFits)
+                .padding(.all, 16)
+        }
+    }
+
+    static let data: [PreviewData] = [
+        .init(text: "text", title: "Title"),
+        .init(text: "", title: "Title")
+    ]
+
+    struct FloatingFieldWrapperData: Hashable {
+        let text: String
+        let title: String
     }
 }
+#endif

@@ -7,61 +7,46 @@
 
 import SwiftUI
 
+#if canImport(UIKit) || canImport(Cocoa)
 public struct KTextView: View {
     @Binding public var text: String
 
     let title: String
 
     public var body: some View {
-        FloatingFieldWrapper(text: text, title: title, field: {
+        VStack {
+            Text(title)
+                .foregroundColor(.accentColor)
+                .offset(y: 12)
+                .ktakeWidthEagerly(alignment: .leading)
             TextViewRepresentable(text: $text)
-        })
+                .overlay(RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.secondary, lineWidth: 1))
+        }
     }
 }
 
-struct TextViewRepresentable: UIViewRepresentable {
-    @Binding var text: String
-
-    func makeUIView(context: Context) -> UIViewType {
-        let textView = UITextView()
-        textView.delegate = context.coordinator
-        textView.isScrollEnabled = true
-        textView.isSelectable = true
-        textView.isUserInteractionEnabled = true
-        textView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        return textView
-    }
-
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        if uiView.text != text {
-            uiView.text = text
-        }
-        if uiView.window != nil, !uiView.isFirstResponder {
-            uiView.becomeFirstResponder()
-        }
-    }
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-
-    final class Coordinator: NSObject, UITextViewDelegate {
-        var parent: TextViewRepresentable
-
-        init(_ parent: TextViewRepresentable) {
-            self.parent = parent
-        }
-
-        func textViewDidChange(_ textView: UITextView) {
-            parent.$text.wrappedValue = textView.text
-        }
-    }
-
-    typealias UIViewType = UITextView
-}
-
+#if DEBUG
 struct KTextView_Previews: PreviewProvider {
+    typealias PreviewData = KTextViewData
+
     static var previews: some View {
-        KTextView(text: .constant("something\nsomething\nview."), title: "Title")
+        ForEach(data, id: \.self) { item in
+            KTextView(text: .constant(item.text), title: item.title)
+                .frame(width: 200, height: 200)
+                .previewLayout(.sizeThatFits)
+                .padding(.all, 16)
+        }
+    }
+
+    static let data: [PreviewData] = [
+        .init(text: "something\nsomething\nview.", title: "Title"),
+    ]
+
+    struct KTextViewData: Hashable {
+        let text: String
+        let title: String
     }
 }
+#endif
+#endif
