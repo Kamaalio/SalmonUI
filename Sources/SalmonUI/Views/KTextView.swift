@@ -17,7 +17,7 @@ public struct KTextView: View {
         VStack {
             Text(title)
                 .foregroundColor(.accentColor)
-                .offset(y: 12)
+                .offset(y: 8)
                 .ktakeWidthEagerly(alignment: .leading)
             TextViewRepresentable(text: $text)
                 .overlay(RoundedRectangle(cornerRadius: 8)
