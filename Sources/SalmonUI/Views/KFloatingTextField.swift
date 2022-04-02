@@ -45,35 +45,14 @@ public struct KFloatingTextField: View {
     }
 
     public var body: some View {
-        ZStack(alignment: .leading) {
-            Text(title)
-                .foregroundColor(textColor)
-                .offset(y: $text.wrappedValue.isEmpty ? 0 : -25)
-                .scaleEffect($text.wrappedValue.isEmpty ? 1 : 0.75, anchor: .leading)
-                .padding(.horizontal, titleHorizontalPadding)
+        FloatingFieldWrapper(text: text, title: title, field: {
             #if canImport(UIKit)
             TextField("", text: $text, onEditingChanged: onEditingChanged, onCommit: onCommit)
                 .keyboardType(textFieldType.keyboardType)
             #else
             TextField(title, text: $text, onEditingChanged: onEditingChanged, onCommit: onCommit)
             #endif
-        }
-        .padding(.top, 12)
-        .animation(.spring(response: 0.5))
-    }
-
-    private var textColor: Color {
-        if $text.wrappedValue.isEmpty {
-            return .secondary
-        }
-        return .accentColor
-    }
-
-    private var titleHorizontalPadding: CGFloat {
-        if $text.wrappedValue.isEmpty {
-            return 4
-        }
-        return 0
+        })
     }
 }
 
