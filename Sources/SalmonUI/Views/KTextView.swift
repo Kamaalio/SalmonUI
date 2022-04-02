@@ -9,9 +9,14 @@ import SwiftUI
 
 #if canImport(UIKit) || canImport(Cocoa)
 public struct KTextView: View {
-    @Binding public var text: String
+    @Binding var text: String
 
     let title: String
+
+    public init(text: Binding<String>, title: String) {
+        self._text = text
+        self.title = title
+    }
 
     public var body: some View {
         VStack {
