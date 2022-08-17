@@ -8,6 +8,8 @@
 import SwiftUI
 
 public struct KLoading: View {
+    public init() { }
+
     public var body: some View {
         #if os(macOS)
         KActivityIndicator(isAnimating: .constant(true), style: .spinning)
