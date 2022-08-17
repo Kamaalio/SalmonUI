@@ -1,5 +1,5 @@
 //
-//  ScrollableForm.swift
+//  KScrollableForm.swift
 //  
 //
 //  Created by Kamaal M Farah on 17/08/2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// Makes sure `Form` is scrollable, especially on macOS
-public struct ScrollableForm<Content: View>: View {
+public struct KScrollableForm<Content: View>: View {
     public let content: Content
 
     public init(@ViewBuilder content: () -> Content) {
@@ -30,7 +30,7 @@ public struct ScrollableForm<Content: View>: View {
 
 struct ScrollableForm_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollableForm {
+        KScrollableForm {
             Text("Text")
         }
     }
