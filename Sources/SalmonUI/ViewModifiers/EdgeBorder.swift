@@ -8,7 +8,7 @@
 import SwiftUI
 
 public extension View {
-    func border(width: CGFloat, edges: [Edge], color: Color) -> some View {
+    func kborder(width: CGFloat, edges: [Edge], color: Color) -> some View {
         overlay(EdgeBorder(width: width, edges: edges).foregroundColor(color))
     }
 }
