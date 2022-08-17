@@ -8,16 +8,16 @@
 import SwiftUI
 
 @available(macOS 12.0, *)
-struct KSection<Content: View>: View {
-    let header: String?
-    let content: Content
+public struct KSection<Content: View>: View {
+    public let header: String?
+    public let content: Content
 
-    init(header: String? = nil, @ViewBuilder content: () -> Content) {
+    public init(header: String? = nil, @ViewBuilder content: () -> Content) {
         self.header = header?.uppercased()
         self.content = content()
     }
 
-    var body: some View {
+    public var body: some View {
         KJustStack {
             if let header {
                 #if os(macOS)
