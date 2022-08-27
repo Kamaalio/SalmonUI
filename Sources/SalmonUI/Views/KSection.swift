@@ -19,7 +19,7 @@ public struct KSection<Content: View>: View {
 
     public var body: some View {
         KJustStack {
-            if let header {
+            if let header = header {
                 #if os(macOS)
                 VStack {
                     Text(header)
